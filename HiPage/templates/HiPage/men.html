@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Sport Clothes Shop</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,500,600&amp;subset=cyrillic" rel="stylesheet">
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href={% static '/css/men.css' %}>
+</head>
+<body>
+<header>
+  <div class=header>
+    <div class=logo><a href="#">SCS</a></div>
+    <div class=bag>
+      <img src="{% static '/media/img/Shop.png' %}"/>
+      <div class=count>Товаров в корзине: 0</div>
+    </div>
+  </div>
+</header>
+  <nav>
+    <ul class="ul1">
+      <li><a href="main.html">Главная</a></li>
+      <li></li>
+      <li><a href="men.html">Мужчины</a></li>
+    </ul>
+    <ul class="ul2">
+      <li><a href=#>Майки</a></li>
+      <li><a href=#>Футболки</a></li>
+      <li><a href=#>Лонгсливы</a></li>
+      <li><a href=#>Худи</a></li>
+      <li><a href=#>Шорты</a></li>
+      <li><a href=#>Штаны</a></li>
+    </ul>
+  </nav>
+{% for good in SIZE %}
+<div class=content>
+	<div class=string>
+ 		<div class=item>
+			<style type = "text/css">
+				.item {
+					background: #fff url({{ good.Photo.url}});
+				}
+			</style>
+   		<ul class="sizes">
+				{% for i in good.Size.all %}
+				<li><a href=#>{{i.size}}</a></li>
+				{% endfor%}
+   		</ul>
+  	</div>
+	</div>
+</div>
+{% endfor %}
+</body>
+</html>

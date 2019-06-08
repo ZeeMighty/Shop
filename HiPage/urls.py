@@ -8,8 +8,7 @@ from HiPage.models import Good
 urlpatterns = [
 
     url(r'^$', views.IndexView, name = 'index'),
-    url(r'men/', view.Men, name = 'men'),
-
+    url(r'men/', views.Men, name = 'men'),
     url(r'aboutus/', views.AboutUs, name = 'aboutus'),
     url(r'terms/', views.Terms, name = 'terms'),
     url(r'delivery/', views.Delivery, name = 'delivery'),

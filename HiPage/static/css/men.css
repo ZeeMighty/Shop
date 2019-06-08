@@ -1,0 +1,107 @@
+body {
+ margin: 0;
+ padding: 0;
+ background: #2a2a2a;
+ font-family: 'Montserrat', sans-serif;
+ color: #f4f4f4;
+}
+
+header {
+  background-color: #141414;
+}
+.header{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 auto;
+  height: 55px;
+  width: 1300px;
+}
+
+.bag {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+div .count {
+  margin-left: 5px;
+}
+
+a {
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
+li {
+  display: block;
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+
+ul {
+  display: flex;
+  padding: 0px;
+}
+
+nav {
+  background: ;
+  height: 55px;
+  width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.ul2 {
+  margin-left: auto;
+}
+
+.ul2 li {
+  margin: 0 0 0 10px;
+}
+
+.item {
+  padding: 0;
+  margin: 0 auto;
+  width: 266px;
+  height: 366px;
+  /*background: #fff url(../img/man.png);*/
+  /* background-color: #fff; */
+  transition: 0.5s ease;
+  transition-property: opacity;
+  display: block;
+}
+
+.sizes li a{
+  color: #141414;
+  font-size: 12px;
+  font-weight: 600;
+  display: block;
+  margin: 0 auto;
+}
+.sizes {
+  margin-left: 68px;
+  margin-top: 5px;
+  align-items: center;
+}
+
+.item:hover {
+  background-color: #1c1c1c;
+  opacity: 0.1;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.string {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 55px;
+}
+
+.content {
+  width: 1290px;
+  margin: 0 auto;
+}

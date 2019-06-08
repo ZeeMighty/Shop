@@ -1,9 +1,7 @@
 from django.contrib import admin
 from HiPage.models import Good, Size
 
-class Sizes(admin.TabularInline):
-    model = Size
-    extra = 1
+
 
 class GoodAdmin(admin.ModelAdmin):
     model = Good
@@ -13,8 +11,11 @@ class GoodAdmin(admin.ModelAdmin):
     fieldsets = [
     ('Name', {'fields': ['Name']}),
     ('Available', {'fields': ['Available']}),
-    ('Photo', {'fields': ['Photo'], 'classes': ['collapse']})
+    ('Photo', {'fields': ['Photo'], 'classes': ['collapse']}),
+    ('Discount', {'fields': ['Discount'], 'classes': ['collapse']}),
+    ('Price', {'fields': ['Price']}),
+    ('Sizes', {'fields': ['Size']}),
     ]
-    inlines = [Sizes]
 
 admin.site.register(Good, GoodAdmin)
+admin.site.register(Size)
