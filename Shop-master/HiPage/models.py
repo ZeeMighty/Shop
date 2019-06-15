@@ -11,24 +11,31 @@ class Good(models.Model):
     URL = models.CharField(max_length = 50, default = " ")
 
 
-    def _str_(self):
+    def __str__(self):
         return self.Name
+
+#class GetObjectManeger(models.Manager):
+#    def all(self, *args, **kwargs):
+#        return super(ArticleManager, self).get_queryset().filter()
 
 class Type(models.Model):
     type = models.CharField(max_length = 50, default = " ")
 
-    def _str_(self):
+    def __str__(self):
         return self.type
 
 class Size(models.Model):
     size = models.CharField(max_length = 150)
 
-    def _str_(self):
+    def __str__(self):
         return self.size
 
 
 class Good_Get(models.Model):
+#    Name = models.CharField(max_length = 150)
+#    Price = models.IntegerField(default = '0')
+#    Photo = models.ImageField(upload_to = 'clothes_photos')
     Size = models.ForeignKey(Size, on_delete=models.CASCADE, null=True)
 
-    def _str_(self):
+    def __str__(self):
         return self.Name

@@ -1,4 +1,3 @@
-{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -22,15 +21,23 @@
     </div>
   </div>
 </header>
-<div class = divGoodForm>
-	{% for g in good %}
-  <form method = "post" class = GoodForm id = "f1">
-    {% csrf_token %}
-		<p>{{ g.Name }}</p>
-		<div class=item style = "background: url({{ g.Photo.url}})">
-		<div style = "color: rgb(0,0,0);">{{ form.Size }}</div>
+<div class=content>
+	<div class=string>
+		{% for good in SIZE %}
+			<div class=item style = "background: url({{ good.Photo.url}})">
+   		<ul class="sizes">
+				{% for i in good.Size.all %}
+				<li class = text><a href=# class = text>{{i.size}}</a></li>
+				{% endfor%}
+   		</ul>
+			<div class = name>
+				<p>{{good.Name}}</p>
+				<p>{{good.Price}}₽</p>
+				<a href = "{% url 'HiPage:adding_to_cart' good.id %}" class = buy id = "g{{good.id}}">КУПИТЬ!</a>
+			</div>
+  	</div>
 		{% endfor %}
-  <br><button type="submit">Submit</button>
- </form>
+	</div>
+</div>
 </body>
 </html>

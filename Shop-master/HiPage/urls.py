@@ -3,6 +3,7 @@ from django.conf.urls import url
 from . import views
 from django.views.generic import ListView, DetailView
 from HiPage.models import Good
+from . import forms
 
 app_name = 'HiPage'
 urlpatterns = [

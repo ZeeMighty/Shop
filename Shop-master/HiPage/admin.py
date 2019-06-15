@@ -1,5 +1,5 @@
 from django.contrib import admin
-from HiPage.models import Good, Size, Type
+from HiPage.models import Good, Size, Type, Good_Get
 
 class GoodAdmin(admin.ModelAdmin):
     model = Good
@@ -21,3 +21,4 @@ class GoodAdmin(admin.ModelAdmin):
 admin.site.register(Good, GoodAdmin)
 admin.site.register(Size)
 admin.site.register(Type)
+admin.site.register(Good_Get)

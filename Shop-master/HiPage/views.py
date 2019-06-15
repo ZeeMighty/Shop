@@ -16,12 +16,12 @@ def Men(request):
 
 class Adding(View):
     def get(self, request, good_id):
-        form = GoodGet()
+        form = GoodGet(good_id1 = good_id)
         good = Good.objects.filter(id = good_id)
         return render(request, 'HiPage/add_to_cart.html', context = {'form': form, 'good': good})
 
     def post(self, request, good_id):
-        form = GoodGet(request.POST)
+        form = GoodGet(request.POST, good_id1 = good_id)
         if form.is_valid():
             form.save()
             return redirect('/cart')
